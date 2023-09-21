@@ -1,14 +1,15 @@
 package org.example.Rooms;
 
-import org.example.Guest;
 
 public class Bedroom extends Room{
     private int roomNumber;
     private RoomType roomType;
-    public Bedroom(int roomNumber, RoomType roomType) {
+    private double nightlyRate;
+    public Bedroom(int roomNumber, RoomType roomType, int nightlyRate) {
         super(roomType.getCapacity());
         this.roomType = roomType;
         this.roomNumber = roomNumber;
+        this.nightlyRate = nightlyRate;
     }
 
     public int getRoomNumber() {
@@ -17,5 +18,9 @@ public class Bedroom extends Room{
 
     public RoomType getRoomType() {
         return roomType;
+    }
+
+    public double getNightlyRate() {
+        return nightlyRate;
     }
 }
